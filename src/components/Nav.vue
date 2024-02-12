@@ -18,7 +18,6 @@
                     {{ btn.txt }}
                 </a>
             </div>
-
         </div>
     </div>
   </nav>
@@ -42,6 +41,10 @@ export default {
 
 .nav {
     width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
 
     .row {
         justify-content: space-between;
@@ -57,6 +60,7 @@ export default {
         align-items: center;
         text-align: center;
         row-gap: 3px;
+        user-select: none;
 
         .brand-name {
             font-size: 22px;
