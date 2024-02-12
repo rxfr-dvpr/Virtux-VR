@@ -1,6 +1,6 @@
 # VirtuX-VR
 
-This template should help get you started developing with Vue 3 in Vite.
+The Website is about a company that sells VR/AR Headsets
 
 ## Recommended IDE Setup
 
