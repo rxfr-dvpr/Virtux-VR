@@ -67,7 +67,7 @@ body {
     background: transparent;
     max-width: max-content;
 
-    &:hover {
+    &:hover, &.scnd {
         background: var(--main-purple) !important;
         color: var(--main-white) !important;
         box-shadow:  4px 4px 6px 0 rgba(0,0,0,.5),
@@ -75,6 +75,13 @@ body {
         inset -4px -4px 6px 0 rgba(255,255,255,.2),
         inset 4px 4px 6px 0 rgba(0, 0, 0, .4) !important;
         border-color: transparent !important;
+    }
+
+    &.scnd:hover {
+        box-shadow:  4px 4px 6px 0 rgba(0,0,0,.5),
+        -4px -4px 6px 0 rgba(0,0,0, .5), 
+        inset -4px -4px 6px 0 rgba(0, 0, 0, .4),
+        inset 4px 4px 6px 0  rgba(255,255,255,.2) !important;
     }
 }
 
@@ -85,4 +92,15 @@ img {
 
 .purple-clr {
     color: var(--main-purple);
+}
+
+.all-title {
+    font-size: calc(30px + 10 * (100vw / 1920));
+    text-transform: uppercase;
+}
+
+@media (min-width: 1920px) {
+    .all-title {
+        font-size: 40px !important;
+    }
 }
