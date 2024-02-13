@@ -5,6 +5,7 @@
     --main-black: #343045;
     --main-white: #fff;
     --main-pink: #C0B7E8;
+    --main-purple: purple;
 }
 
 * {
@@ -21,6 +22,10 @@ a {
 
 ul {
     list-style: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .container {
@@ -56,17 +61,28 @@ body {
     border-radius: 40px;
     text-transform: uppercase;
     border: solid 2px #fff;
-    display: grid;
-    transition: .3s;
+    transition: .4s;
     font-weight: 800;
     min-width: max-content;
+    background: transparent;
+    max-width: max-content;
 
     &:hover {
-        background: #8176AF;
+        background: var(--main-purple) !important;
+        color: var(--main-white) !important;
+        box-shadow:  4px 4px 6px 0 rgba(0,0,0,.5),
+        -4px -4px 6px 0 rgba(0,0,0, .5), 
+        inset -4px -4px 6px 0 rgba(255,255,255,.2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .4) !important;
+        border-color: transparent !important;
     }
 }
 
 img {
     pointer-events: none;
     user-select: none;
+}
+
+.purple-clr {
+    color: var(--main-purple);
 }
