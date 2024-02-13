@@ -45,6 +45,7 @@ export default {
     top: 0;
     left: 0;
     backdrop-filter: blur(10px);
+    padding: 10px 0;
 
     .row {
         justify-content: space-between;
