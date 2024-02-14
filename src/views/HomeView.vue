@@ -8,6 +8,10 @@
     <Introduction/>
 
     <About/>
+
+    <WhyBuild/>
+    
+    <Cards/>
   </main>
   
 </template>
@@ -17,6 +21,8 @@ import Header from '@/components/Header.vue'
 import HeaderWidget from '@/components/HeaderWidget.vue'
 import Introduction from '@/components/Introduction.vue'
 import About from '@/components/About.vue'
+import WhyBuild from '@/components/WhyBuild.vue'
+import Cards from '@/components/Cards.vue'
 
 export default {
   name: "Home Page",
@@ -24,7 +30,9 @@ export default {
     Header,
     HeaderWidget,
     Introduction,
-    About
+    About,
+    WhyBuild,
+    Cards
   }
 }
 

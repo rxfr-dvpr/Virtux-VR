@@ -48,12 +48,15 @@ export default {
     .about__img-box {
         max-width: 525px;
         width: 100%;
+        height: 100%;
         overflow: hidden;
         box-shadow: 0px 0px 15px rgba($color: #000000, $alpha: .1);
         border-radius: 220px 90px;
 
         .about-img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 

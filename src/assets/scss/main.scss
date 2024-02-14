@@ -135,3 +135,12 @@ img {
         font-size: 16px !important;
     }
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-pink);
+    border-radius: 10px;
+}
