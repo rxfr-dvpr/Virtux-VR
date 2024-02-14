@@ -97,6 +97,19 @@ img {
 .all-title {
     font-size: calc(30px + 10 * (100vw / 1920));
     text-transform: uppercase;
+
+    .light-title {
+        font-weight: 300;
+    }
+}
+
+.all-txt {
+    font-size: calc(12px + 4 * (100vw / 1920));
+    font-weight: 300;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
 }
 
 .header__widget {
@@ -112,5 +125,9 @@ img {
 @media (min-width: 1920px) {
     .all-title {
         font-size: 40px !important;
+    }
+
+    .all-txt {
+        font-size: 16px !important;
     }
 }
