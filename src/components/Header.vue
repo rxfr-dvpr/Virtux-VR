@@ -10,7 +10,7 @@
             </div>
 
             <div class="header__img-box">
-                <img src="@/assets/images/header-img.png" alt="" class="header-img">
+                <img :src="store.img" alt="" class="header-img">
             </div>
         </div>
     </div>
@@ -72,6 +72,7 @@ export default {
         width: 100%;
         border-radius: 100px 100px 100px 250px;
         overflow: hidden;
+        box-shadow: 0px 0px 15px rgba($color: #000000, $alpha: .1);
 
         .header-img {
             width: 100%;

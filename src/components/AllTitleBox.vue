@@ -38,9 +38,9 @@ export default {
     }
 
     &-title {
-        max-width: 320px;
-        width: 100%;
         line-height: 120%;
+        display: flex;
+        flex-direction: column;
     }
 }
 

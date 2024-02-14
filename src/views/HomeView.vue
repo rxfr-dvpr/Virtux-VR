@@ -6,20 +6,25 @@
     <HeaderWidget/>
 
     <Introduction/>
+
+    <About/>
   </main>
+  
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
 import HeaderWidget from '@/components/HeaderWidget.vue'
 import Introduction from '@/components/Introduction.vue'
+import About from '@/components/About.vue'
 
 export default {
   name: "Home Page",
   components: {
     Header,
     HeaderWidget,
-    Introduction
+    Introduction,
+    About
   }
 }
 
