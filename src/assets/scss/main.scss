@@ -99,6 +99,16 @@ img {
     text-transform: uppercase;
 }
 
+.header__widget {
+    .item-icon {
+        font-size: 35px;
+
+        i {
+            color: var(--main-pink);
+        }
+    }
+}
+
 @media (min-width: 1920px) {
     .all-title {
         font-size: 40px !important;
