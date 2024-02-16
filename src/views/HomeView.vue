@@ -14,6 +14,8 @@
     <Cards/>
 
     <Process/>
+
+    <ProcessSteps/>
   </main>
   
 </template>
@@ -26,6 +28,7 @@ import About from '@/components/About.vue'
 import WhyBuild from '@/components/WhyBuild.vue'
 import Cards from '@/components/Cards.vue'
 import Process from '@/components/Process.vue'
+import ProcessSteps from '@/components/ProcessSteps.vue'
 
 export default {
   name: "Home Page",
@@ -36,7 +39,8 @@ export default {
     About,
     WhyBuild,
     Cards,
-    Process
+    Process,
+    ProcessSteps
   }
 }
 
