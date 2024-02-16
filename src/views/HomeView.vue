@@ -12,6 +12,8 @@
     <WhyBuild/>
     
     <Cards/>
+
+    <Process/>
   </main>
   
 </template>
@@ -23,6 +25,7 @@ import Introduction from '@/components/Introduction.vue'
 import About from '@/components/About.vue'
 import WhyBuild from '@/components/WhyBuild.vue'
 import Cards from '@/components/Cards.vue'
+import Process from '@/components/Process.vue'
 
 export default {
   name: "Home Page",
@@ -32,7 +35,8 @@ export default {
     Introduction,
     About,
     WhyBuild,
-    Cards
+    Cards,
+    Process
   }
 }
 

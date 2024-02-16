@@ -1,5 +1,5 @@
 <template>
-  <div class="virtux__cards">
+  <div class="virtux__cards" id="services">
     <div class="virtux__cards-item" v-for="(card, idx) in store.cards" :key="idx">
 
         <div class="card-img-box">
