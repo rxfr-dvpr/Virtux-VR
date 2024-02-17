@@ -1,5 +1,5 @@
 <template>
-  <section class="process__section">
+  <section class="process__section" id="how">
     <div class="container">
         <div class="row">
             <AllTitleBox :title="store.title"/>

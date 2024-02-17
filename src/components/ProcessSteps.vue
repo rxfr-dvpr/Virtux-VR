@@ -45,6 +45,7 @@ export default {
         flex-direction: column;
         row-gap: 25px;
         align-items: center;
+        text-align: center;
 
         .step-num {
             background: rgb(192,183,232);
