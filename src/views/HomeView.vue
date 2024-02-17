@@ -12,11 +12,12 @@
     
     <Cards/>
 
+    <Tech/>
+
     <Process/>
 
     <ProcessSteps/>
 
-    <Tech/>
   </main>
 
   <Transition name="fade">

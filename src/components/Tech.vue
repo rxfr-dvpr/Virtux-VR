@@ -2,6 +2,10 @@
   <section class="tech__section" id="tech">
     <div class="container">
         <div class="row">
+            <div class="tech-content">
+                <iframe height="600" src="https://www.youtube.com/embed/TX9qSaGXFyg?si=lJurjdzKlBD_Sa-N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
             <div class="brands__list">
                 <a :href="brand.url" class="brands__list-item"  target="_blank"
                  v-for="(brand, idx) in store.brands" :key="idx">
@@ -34,6 +38,18 @@ export default {
 
     .row {
         flex-direction: column;
+        row-gap: 60px;
+    }
+
+    .tech-content {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        
+        iframe {
+            width: 100%;
+        }
+
     }
 
     .brands__list {

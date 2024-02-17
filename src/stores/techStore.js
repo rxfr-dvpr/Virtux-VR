@@ -23,6 +23,8 @@ export const techStore = defineStore('Tech Store', {
                 name: 'vive',
                 url: 'https://www.vive.com/'
             }
-        ]
+        ],
+        techImg: 'https://firebasestorage.googleapis.com/v0/b/virtux-vr.appspot.com/o/TechSection%2Ftech-img.jpg?alt=media&token=17304062-928f-405f-ac03-a63a3b838217',
+        title: 'technologies & hardware <span class="light-title">used by virtux vr.</span>'
     })
 })
