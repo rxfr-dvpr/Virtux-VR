@@ -27,11 +27,11 @@ export const contactStore = defineStore('Contact Store', {
                 class: 'email-inp'
             },
             {
-                name: 'number',
+                name: 'phone',
                 value: '',
-                placeHolder: 'phone number',
+                placeHolder: '+998(__)000-00-00',
                 type: 'number',
-                class: 'fName-inp'
+                class: 'number-inp'
             },
             {
                 name: 'subject',
