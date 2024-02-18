@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" id="contact">
     <div class="container">
         <div class="row">
             <div class="header__descr">

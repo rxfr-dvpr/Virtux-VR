@@ -18,6 +18,7 @@
 
     <ProcessSteps/>
 
+    <Contact/>
   </main>
 
   <Transition name="fade">
@@ -36,6 +37,7 @@ import Cards from '@/components/Cards.vue'
 import Process from '@/components/Process.vue'
 import ProcessSteps from '@/components/ProcessSteps.vue'
 import Tech from '@/components/Tech.vue'
+import Contact from '@/components/Contact.vue'
 
 export default {
   name: "Home Page",
@@ -48,7 +50,8 @@ export default {
     Cards,
     Process,
     ProcessSteps,
-    Tech
+    Tech,
+    Contact
   },
   data() {
     return {
