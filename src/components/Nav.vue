@@ -7,17 +7,21 @@
                 <span class="brand-name">virtux</span>
             </router-link>
 
-            <ul class="nav__list">
-                <li class="nav__list-item" v-for="(link, idx) in store.links" :key="idx">
-                    <a :href="link.url" class="nav__list-link">{{ link.name }}</a>
-                </li>
-            </ul>
+            <div class="nav__collapse" :class="{'opened': navOpened && scrollYVal > 120}" @click="this.navOpened = false">
+                <ul class="nav__list">
+                    <li class="nav__list-item" v-for="(link, idx) in store.links" :key="idx">
+                        <a :href="link.url" class="nav__list-link">{{ link.name }}</a>
+                    </li>
+                </ul>
 
-            <div class="nav__buttons">
-                <a :href="btn.url" :class="`nav__buttons-item all-btn ${btn.name}`" v-for="(btn, id) in store.buttons" :key="id">
-                    {{ btn.txt }}
-                </a>
+                <div class="nav__buttons">
+                    <a :href="btn.url" :class="`nav__buttons-item all-btn ${btn.name}`" v-for="(btn, id) in store.buttons" :key="id">
+                        {{ btn.txt }}
+                    </a>
+                </div>
             </div>
+            
+            <button class="nav-mb-btn" v-show="windowSize <= 992" @click="navOpened = !navOpened"><i class="far fa-bars"></i></button>
         </div>
     </div>
   </nav>
@@ -30,8 +34,20 @@ export default {
     name: 'Navigation',
     data() {
         return {
-            store: navStore()
+            store: navStore(),
+            windowSize: window.innerWidth,
+            navOpened: false,
+            scrollYVal: window.scrollY
         }
+    },
+    mounted() {
+        window.addEventListener('resize', () => {
+            this.windowSize = window.innerWidth
+        })
+
+        window.addEventListener('scroll', () => {
+          this.scrollYVal = window.scrollY
+        })
     }
 }
 
@@ -51,7 +67,7 @@ export default {
     .row {
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
     }
 
     &-logo {
@@ -63,6 +79,7 @@ export default {
         text-align: center;
         row-gap: 3px;
         user-select: none;
+        z-index: 99999;
 
         .brand-name {
             font-size: 22px;
@@ -75,6 +92,15 @@ export default {
             max-width: 60px;
             width: 100%;
         }
+    }
+
+    &__collapse {
+        max-width: 900px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
     }
 
     &__list {
@@ -113,6 +139,45 @@ export default {
             &:hover {
                 border-color: transparent;
             }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .nav__collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        max-width: max-content;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #211E2E;
+        justify-content: center;
+        padding: 20px;
+        transition: .4s;
+        transform: translateX(-100%);
+
+        .nav__list, .nav__buttons {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 20px;
+        }
+
+        &.opened {
+            transform: translateX(0%);
+        }
+    }
+
+    .nav-mb-btn {
+        background: transparent;
+        font-size: 30px;
+        border: 0;
+        outline: none;
+
+        i {
+            color: var(--main-purple);
         }
     }
 }

@@ -22,10 +22,9 @@
   </main>
 
   <Transition name="fade">
-    <button class="scroll-btn all-btn scnd" @click="scrollToTop" v-show="windowSize > 100"><i class="fas fa-chevron-up"></i></button>
+    <button class="scroll-btn all-btn scnd" @click="scrollToTop" v-show="scrollYVal > 100"><i class="fas fa-chevron-up"></i></button>
   </Transition>
 
-  <Footer/>
 </template>
 
 <script>
@@ -39,7 +38,6 @@ import Process from '@/components/Process.vue'
 import ProcessSteps from '@/components/ProcessSteps.vue'
 import Tech from '@/components/Tech.vue'
 import Contact from '@/components/Contact.vue'
-import Footer from '@/components/Footer.vue'
 
 export default {
   name: "Home Page",
@@ -54,11 +52,10 @@ export default {
     ProcessSteps,
     Tech,
     Contact,
-    Footer
   },
   data() {
     return {
-      windowSize: window.scrollY
+      scrollYVal: window.scrollY
     }
   },
   methods: {
@@ -69,7 +66,7 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', () => {
-      this.windowSize = window.scrollY
+      this.scrollYVal = window.scrollY
     })
   }
 }
@@ -91,7 +88,7 @@ export default {
   height: 40px !important;
   position: fixed;
   bottom: 10%;
-  right: 5%;
+  right: 3%;
   z-index: 9874;
   padding: 0;
   font-size: 15px;

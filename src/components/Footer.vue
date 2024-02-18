@@ -28,7 +28,7 @@ export default {
 
 .footer {
     width: 100%;
-    padding: 120px 0 60px;
+    padding: 100px 0 60px;
 
     .row {
         flex-direction: column;
