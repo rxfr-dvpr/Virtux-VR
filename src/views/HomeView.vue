@@ -25,6 +25,7 @@
     <button class="scroll-btn all-btn scnd" @click="scrollToTop" v-show="windowSize > 100"><i class="fas fa-chevron-up"></i></button>
   </Transition>
 
+  <Footer/>
 </template>
 
 <script>
@@ -38,6 +39,7 @@ import Process from '@/components/Process.vue'
 import ProcessSteps from '@/components/ProcessSteps.vue'
 import Tech from '@/components/Tech.vue'
 import Contact from '@/components/Contact.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: "Home Page",
@@ -51,7 +53,8 @@ export default {
     Process,
     ProcessSteps,
     Tech,
-    Contact
+    Contact,
+    Footer
   },
   data() {
     return {
