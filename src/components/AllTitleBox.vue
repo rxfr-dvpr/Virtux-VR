@@ -44,4 +44,14 @@ export default {
     }
 }
 
+@media (max-width: 886px) {
+    .all-title-box {
+        max-width: max-content;
+    }
+    
+    .right-icon {
+        display: none;
+    }
+}
+
 </style>

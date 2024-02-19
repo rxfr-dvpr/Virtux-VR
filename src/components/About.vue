@@ -74,4 +74,27 @@ export default {
     }
 }
 
+@media (max-width: 992px) {
+    .about__img-box {
+        max-width: 400px !important;
+        border-radius: 180px 70px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__img-box {
+        border-radius: 140px 50px !important;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__descr {
+        align-items: center;
+        text-align: center;
+    }
+}
+
 </style>

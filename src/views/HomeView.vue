@@ -104,4 +104,10 @@ export default {
   opacity: 0;
 }
 
+@media (max-width: 992px) {
+  .main {
+    row-gap: 70px;
+  }
+}
+
 </style>

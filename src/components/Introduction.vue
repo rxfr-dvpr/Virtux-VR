@@ -47,4 +47,11 @@ export default {
     }
 }
 
+@media (max-width: 886px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 </style>
