@@ -118,7 +118,7 @@ img {
 
 .header__widget {
     .item-icon {
-        font-size: 35px;
+        font-size: calc(25px + 10 * (100vw / 1920));
 
         i {
             color: var(--main-pink);
@@ -133,6 +133,12 @@ img {
 
     .all-txt {
         font-size: 16px !important;
+    }
+
+    .header__widget {
+        .item-icon {
+            font-size: 35px !important;
+        }
     }
 }
 

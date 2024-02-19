@@ -46,9 +46,7 @@ export default {
         background: rgb(58,52,86);
         background: radial-gradient(circle, rgba(58,52,86,1) 0%, rgba(33,30,46,1) 100%);
         border-radius: 70px;
-        column-gap: 15px;
-        row-gap: 25px;
-        flex-wrap: wrap;
+        gap: 25px;
 
         &-item {
             display: flex;
@@ -61,7 +59,7 @@ export default {
                 row-gap: 5px;
 
                 &-name {
-                    font-size: 24px;
+                    font-size: calc(16px + 8 * (100vw / 1920));
                     text-transform: capitalize;
                     font-weight: 700;
                 }
@@ -74,5 +72,41 @@ export default {
         }
     }
 }
+
+@media (min-width: 1920px) {
+    .item-descr-name {
+        font-size: 24px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .header__widget {
+        padding: 25px !important;
+    }
+}
+
+@media (max-width: 886px) {
+    .row {
+        justify-content: center;
+    }
+
+    .header__widget {
+        flex-direction: column;
+        max-width: 600px;
+        background: transparent !important;
+        padding: 0 !important;
+        align-items: flex-start !important;
+
+        &-item {
+            width: 100%;
+            background: rgb(58,52,86);
+            background: radial-gradient(circle, rgba(58,52,86,1) 0%, rgba(33,30,46,1) 100%);
+            padding: 20px;
+            border-radius: 45px;
+        }
+    }
+}
+
+
 
 </style>
