@@ -182,4 +182,14 @@ export default {
     }
 }
 
+@media (max-width: 668px) {
+    .nav-logo {
+        max-width: 70px !important;
+        
+        .brand-name {
+            font-size: 18px;
+        }
+    }
+}
+
 </style>

@@ -82,4 +82,25 @@ export default {
     }
 }
 
+@media (max-width: 768px) {
+    .header {
+        padding-top: 50px;
+
+        .row {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &__descr {
+            align-items: center;
+            text-align: center;
+        }
+
+        &__img-box {
+            max-width: 350px;
+            width: 100%;
+        }
+    }
+}
+
 </style>
