@@ -21,7 +21,11 @@
                 </div>
             </div>
             
-            <button class="nav-mb-btn" v-show="windowSize <= 992" @click="navOpened = !navOpened"><i class="far fa-bars"></i></button>
+            <button class="nav-mb-btn" v-show="windowSize <= 992" @click="navOpened = !navOpened" :class="{'active': navOpened}">
+                <span class="nav-btn-line top"></span>
+                <span class="nav-btn-line middle"></span>
+                <span class="nav-btn-line bottom"></span>
+            </button>
         </div>
     </div>
   </nav>
@@ -117,7 +121,7 @@ export default {
             transition: .3s;
             text-transform: uppercase;
 
-            &:hover {
+            &:hover, &:active {
                 color: var(--main-pink);
             }
         }
@@ -172,12 +176,41 @@ export default {
 
     .nav-mb-btn {
         background: transparent;
-        font-size: 30px;
+        width: 26px;
         border: 0;
         outline: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 7px;
 
-        i {
-            color: var(--main-purple);
+        .nav-btn-line {
+            width: 100%;
+            height: 2px;
+            display: block;
+            background: var(--main-pink);
+            transition: .4s;
+
+            &.middle {
+                width: 70%;
+                transition: .3s !important;
+            }
+        }
+
+        &.active {
+            .nav-btn-line {
+                &.top {
+                    transform: translateY(8px) rotate(-45deg);
+                }
+
+                &.middle {
+                    width: 0;
+                }
+
+                &.bottom {
+                    transform: translateY(-10px) rotate(45deg);
+                }
+            }
         }
     }
 }
