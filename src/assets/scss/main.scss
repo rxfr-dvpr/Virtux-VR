@@ -71,7 +71,7 @@ body {
     background: transparent;
     max-width: max-content;
 
-    &:hover, &.scnd {
+    &:hover, &.scnd &:active {
         background: var(--main-purple) !important;
         color: var(--main-white) !important;
         box-shadow:  4px 4px 6px 0 rgba(0,0,0,.5),
@@ -81,7 +81,7 @@ body {
         border-color: transparent !important;
     }
 
-    &.scnd:hover {
+    &.scnd:hover, &.scnd:active {
         box-shadow:  4px 4px 6px 0 rgba(0,0,0,.5),
         -4px -4px 6px 0 rgba(0,0,0, .5), 
         inset -4px -4px 6px 0 rgba(0, 0, 0, .4),

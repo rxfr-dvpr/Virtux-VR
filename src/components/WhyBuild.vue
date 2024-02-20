@@ -36,6 +36,7 @@ export default {
     .row {
         justify-content: space-between;
         align-items: center;
+        gap: 25px;
     }
 
     .why-build-txt {
@@ -43,5 +44,13 @@ export default {
         width: 100%;
     }
 }
+
+@media (max-width: 886px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 
 </style>
