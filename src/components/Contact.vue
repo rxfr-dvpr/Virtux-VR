@@ -67,9 +67,11 @@ export default {
         &-subtitle {
             font-weight: 400 !important;
             text-transform: capitalize;
+            font-size: calc(20px + 20 * (100vw / 1920));
         }
 
         .form__inputs {
+            max-width: 1055px;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -94,7 +96,7 @@ export default {
                 }
 
                 &.long-inp {
-                    max-width: 100% !important;
+                    max-width: 100%;
                 }
 
                 &.msg-inp {
@@ -106,7 +108,63 @@ export default {
 
         &-btn {
             background: #8176AF !important;
+            border-color: #8176AF;
         }
+    }
+}
+
+@media (min-width: 1920px) {
+    .contact__form-subtitle {
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width: 1320px) {
+    .contact__form {
+        padding: 80px 15px !important;
+    }
+}
+
+@media (max-width: 1150px) {
+    .form__inputs {
+        justify-content: center !important;
+
+        &-inp {
+            max-width: 450px !important;
+
+            &.long-inp {
+                max-width: 900px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .contact__form {
+        padding: 70px 50px !important;
+        border-radius: 70px !important;
+    }
+
+    .form__inputs {
+        flex-direction: column;
+        align-items: center;
+
+        &-inp {
+            max-width: 100% !important;
+            border-radius: 25px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__form {
+        padding: 50px 40px !important;
+    }
+}
+
+@media (max-width: 586px) {
+    .contact__form {
+        padding: 50px 25px !important;
     }
 }
 
