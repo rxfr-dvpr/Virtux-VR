@@ -76,4 +76,22 @@ export default {
     }
 }
 
+@media (max-width: 992px) {
+    iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 764px) {
+    iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 566px) {
+    iframe {
+        height: 350px;
+    }
+}
+
 </style>
