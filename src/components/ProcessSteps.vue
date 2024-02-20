@@ -51,7 +51,7 @@ export default {
             background: rgb(192,183,232);
             background: linear-gradient(90deg, rgba(192,183,232,1) 0%, rgba(129,118,175,1) 100%);
             border-radius: 50%;
-            font-size: 64px;
+            font-size: calc(44px + 20 * (100vw / 1920));
             width: 120px;
             height: 120px;
             text-align: center;
@@ -65,7 +65,7 @@ export default {
         }
 
         .step-name {
-            font-size: 24px;
+            font-size: calc(20px + 4 * (100vw / 1920));
             text-transform: capitalize;
             font-weight: 600;
         }
@@ -78,6 +78,27 @@ export default {
         top: 0;
         left: 0;
         z-index: -1;
+    }
+}
+
+@media (min-width: 1920px) {
+    .step-num {
+        font-size: 64px !important;
+    }
+
+    .step-name {
+        font-size: 24px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .process__steps {
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .steps-bg {
+        display: none;
     }
 }
 

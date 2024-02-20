@@ -36,11 +36,19 @@ export default {
     .row {
         justify-content: space-between;
         align-items: center;
+        gap: 25px;
     }
 
     .process-txt {
         max-width: 635px;
         width: 100%;
+    }
+}
+
+@media (max-width: 886px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
