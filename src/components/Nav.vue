@@ -7,7 +7,7 @@
                 <span class="brand-name">virtux</span>
             </router-link>
 
-            <div class="nav__collapse" :class="{'opened': navOpened && scrollYVal > 120}" @click="this.navOpened = false">
+            <div class="nav__collapse" :class="{'opened': navOpened && scrollYVal > 20}" @click="this.navOpened = false">
                 <ul class="nav__list">
                     <li class="nav__list-item" v-for="(link, idx) in store.links" :key="idx">
                         <a :href="link.url" class="nav__list-link">{{ link.name }}</a>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             
-            <button class="nav-mb-btn" v-show="windowSize <= 992" @click="navOpened = !navOpened" :class="{'active': navOpened}">
+            <button class="nav-mb-btn" v-show="windowSize <= 992" @click="navOpened = !navOpened" :class="{'active': navOpened && scrollYVal > 20}">
                 <span class="nav-btn-line top"></span>
                 <span class="nav-btn-line middle"></span>
                 <span class="nav-btn-line bottom"></span>
